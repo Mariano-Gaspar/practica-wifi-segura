@@ -16,7 +16,7 @@ Al realizar la petición al sitio sin cifrar, la totalidad del contenido del paq
 ![Captura de la ventana de herramientas de desarrollador](capturas/herramientas_desarrollador.png)
 
 * **User-Agent:** Expone la arquitectura del sistema operativo (`Linux x84_64`), la versión exacta del navegador (`Gecko/20100101 Firefox/140.0`) y demás información que facilita al atacante el perfilado del objetivo (*fingerprinting*) para eventuales vulnerabilidades específicas del software.
-* **Host:** Indica diréctamente el dominio de destino en texto claro, permitiendo que cualquier intermediario de la red (routers, ISP o atacantes en el medio) reconozca los sitios que el usuario visita, incluso sin analizar el cuerpo del paquete.
+* **Host:** Indica directamente el dominio de destino en texto claro, permitiendo que cualquier intermediario de la red (routers, ISP o atacantes en el medio) reconozca los sitios que el usuario visita, incluso sin analizar el cuerpo del paquete.
 * **Accept/Accept-Language/Accept-Encoding:** Revela los tipos de MIME aceptados por el navegador, la configuración regional/idioma del usuario y los algoritmos de compresión soportados (`gzip`, `deflate`), enriqueciendo la huella digital.
 
 
@@ -34,7 +34,7 @@ La diferencia estructural entre HTTP y HTTPS radica en la capa de seguridad de t
 El despliegue de un túnel VPN en redes no confiables mitiga de forma integral riesgos como:
 
 * **Cifrado Punto a Punto:** Encapsula todo el tráfico generado por el dispositivo mediante algoritmos criptográficos robustos.
-* **Protección en Capa de Red:** Aisla la transmisión de datos frente a cualquier agente malicioso situado en el mismo segmento de la red Wi-Fi pública.
+* **Protección en Capa de Red:** Aísla la transmisión de datos frente a cualquier agente malicioso situado en el mismo segmento de la red Wi-Fi pública.
 * **Ocultamiento de Direcciones IP:** Reemplaza la IP asignada por la red local por la IP del servidor VPN, resguardando la privacidad geográfica del usuario.
 
 
