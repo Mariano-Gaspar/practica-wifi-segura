@@ -18,7 +18,6 @@ Al realizar la petición al sitio sin cifrar, la totalidad del contenido del paq
 * **User-Agent:** Expone la arquitectura del sistema operativo (`Linux x84_64`), la versión exacta del navegador (`Gecko/20100101 Firefox/140.0`) y demás información que facilita al atacante el perfilado del objetivo (*fingerprinting*) para eventuales vulnerabilidades específicas del software.
 * **Host:** Indica diréctamente el dominio de destino en texto claro, permitiendo que cualquier intermediario de la red (routers, ISP o atacantes en el medio) reconozca los sitios que el usuario visita, incluso sin analizar el cuerpo del paquete.
 * **Accept/Accept-Language/Accept-Encoding:** Revela los tipos de MIME aceptados por el navegador, la configuración regional/idioma del usuario y los algoritmos de compresión soportados (`gzip`, `deflate`), enriqueciendo la huella digital.
-* **Cookie/Datos de Sesión:** En sitios HTTP, los tokens de autenticación se envían en texto plano, permitiendo la posibilidad del secuestro inmediato de la sesión (*Session Hijacking*).
 
 
 ## TEXTO PLANO VS. CIFRADO TLS (HTTPS)
@@ -47,7 +46,7 @@ Para constatar la efectividad de las medidas de protección a nivel de capa de r
 ![Contenido de paquetes en texto plano 1](capturas/texto_plano/contenido_http_1.png)
 ![Contenido de paquetes en texto plano 2](capturas/texto_plano/contenido_http_2.png)
 
-* **Con VPN (Túnel Cifrado/WireGuard):** La captura de paquetes de tráfico muestra únicamente paquetes cifrados bajo protocolos de encapsulamiento. La carga útil aparece como datos inteligibles, ocultando también la dirección IP de destino real, las URLs consultadas y las cabeceras de la petición.
+* **Con VPN (Túnel Cifrado/WireGuard):** La captura de paquetes de tráfico muestra únicamente paquetes cifrados bajo protocolos de encapsulamiento. La carga útil aparece como datos ininteligibles, ocultando también la dirección IP de destino real, las URLs consultadas y las cabeceras de la petición.
 ![Secuencia de paquetes con IP de destino ocultada por VPN](capturas/cifrado/secuencia_vpn.png)
 ![Contenido de paquetes completamente cifrado](capturas/cifrado/contenido_cifrado.png)
 
